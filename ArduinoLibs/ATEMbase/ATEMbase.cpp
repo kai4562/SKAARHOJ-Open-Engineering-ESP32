@@ -48,11 +48,7 @@ void ATEMbase::begin(const IPAddress ip, const uint16_t localPort){
 	waitingForIncoming = false;
 
 		// Set up Udp communication object:
-	#ifdef ESP8266
 	WiFiUDP Udp;
-	#else
-	EthernetUDP Udp;
-	#endif
 
 	_Udp = Udp;
 	
